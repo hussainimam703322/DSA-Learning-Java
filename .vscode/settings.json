@@ -2,11 +2,12 @@
     "java.project.sourcePaths": [
         "String",
         "Sorting",
+        "GreedyAlgorithm",
         "Graph",
         "Backtracking",
         "Array 2D(Matrix)",
         "ACODEPRACTICE",
-        "GreedyAlgorithm"
+        "Trie"
     ],
     "java.debug.settings.onBuildFailureProceed": true
 }
