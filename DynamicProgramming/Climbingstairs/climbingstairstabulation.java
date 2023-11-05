@@ -2,20 +2,18 @@ package Climbingstairs;
 
 public class climbingstairstabulation{
     public static int countways(int n){
+        int e = 1000000007;
         int dp[] = new int[n+1];
         dp[0] = 1;
-        for(int i=1;i<=n;i++){
-            if(i == 1){
-                dp[i] = dp[i-1] + 0;
-            }
-            else{
-                dp[i] = dp[i-1] + dp[i-2];
-            }
+        dp[1] = 2;
+        for(int i=2;i<=n;i++){
+            dp[i] = dp[i-1]%e + dp[i-2];
+            
         }
-        return dp[n];
+        return dp[n-1]%e;
     }
     public static void main(String[] args) {
-        int n=5;
+        int n=10;
         System.out.println(countways(n));
     }
    
