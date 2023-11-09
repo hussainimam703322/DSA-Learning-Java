@@ -1,3 +1,5 @@
+package unboundedknapsacktypes;
+
 class unboundedKnapsack{
     public static int tabulationknapsack(int val[],int wt[],int W){
         int n= val.length;
