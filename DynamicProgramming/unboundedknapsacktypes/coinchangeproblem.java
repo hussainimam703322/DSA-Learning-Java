@@ -6,7 +6,7 @@ public class coinchangeproblem {
         // code here.
         long dp[][] = new long[N+1][sum+1];
         for(int i=0;i<N+1;i++){
-            dp[i][0]=1;
+            dp[i][0]=1; //atleast we can give null coin
         }
         for(int j=0;j<sum+1;j++){
             dp[0][j] = 0;
