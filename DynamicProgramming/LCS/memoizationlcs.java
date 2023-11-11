@@ -1,5 +1,9 @@
 package LCS;
-
+/*
+ Given two strings, find the length of longest subsequence present in both of them. 
+ Both the strings are in uppercase latin alphabets.
+ LCS for input strings “ABCDGH” and “AEDFHR” is “ADH” of length 3.
+ */
 public class memoizationlcs {
     public static int longestsequence(String str1, String str2,int n,int m,int dp[][]){
         
