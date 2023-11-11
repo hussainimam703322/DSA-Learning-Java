@@ -48,3 +48,46 @@ public class longestIncreasingSubsequence {
         System.out.println(lis(arr));
     }
 }
+/*
+ static int LCIS(int[] arr1, int m, int[] arr2, int n) {
+        int[][] dp = new int[n + 1][m + 1];
+        int result = 0;
+        for (int i = 1; i <= n; i++) {
+            int currentMax = 0;
+            for (int j = 1; j <= m; j++) {
+                if (arr2[i - 1] == arr1[j - 1]) {
+                    dp[i][j] = currentMax + 1; //we increase the value at at cell;
+                } else {
+                    dp[i][j] = dp[i - 1][j]; // if not then take the previous cell value and update 
+                }
+                if (arr2[i - 1] > arr1[j - 1]) {
+                    currentMax = Math.max(currentMax, dp[i - 1][j]); //if second arr have greater value than arr first
+                                                                     //then we take recent maximum from max value and cell value
+                }
+                result = Math.max(result, dp[i][j]);
+            }
+        }
+        return result;
+    }
+
+STEPS
+LCIS method:
+
+This method takes two arrays (arr1 and arr2) and their sizes (m and n) as input and 
+returns the length of the Longest Common Increasing Subsequence (LCIS).
+
+It uses a 2D array dp to store the length of the LCIS up to the current elements 
+of arr1 and arr2.
+
+It initializes result to 0, which will store the final result (length of LCIS).
+Two nested loops iterate over each element of arr2 and arr1.
+
+The inner loop checks if the current elements of arr2 and arr1 are equal.
+ If they are, it updates the dp array with the length of the LCIS ending at 
+ the current elements.If the current element of arr2 is greater than 
+the current element of arr1,it updates currentMax to the
+maximum value encountered so far in the previous  row of the dp array.
+
+The result is updated with the maximum value in the dp array.
+The final result is the maximum length of LCIS encountered during the entire process.    
+ */
