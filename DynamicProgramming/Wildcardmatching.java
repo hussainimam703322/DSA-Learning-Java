@@ -6,6 +6,7 @@ The wildcard pattern can include the characters ‘?’ and ‘*’
 ‘?’ – matches any single character
 ‘*’ – Matches any sequence of characters (including the empty sequence)      
 */
+//CODE -1
 public class Wildcardmatching {
     public static boolean isMatch(String s , String p){
         int n = s.length();
@@ -41,25 +42,42 @@ public class Wildcardmatching {
         return dp[n][m];
     }
     public static void main(String[] args) {
-        String s = "baaabab";
-        String p = "ba*a?";
+        String s = "aa";
+        String p = "*";
         System.out.println(isMatch(s, p));
     }
 }
-/*
-public boolean isMatch(String s, String p) {
-	boolean match[][] = new boolean[s.length() + 1][p.length() + 1];
-	match[0][0] = true;
-	for (int i = 0; i < p.length(); i++) // judge whether the substring of p matchese empty sequence
-		if (p.charAt(i) == '*')
-			match[0][i + 1] = match[0][i];
-	for (int i = 0; i < s.length(); i++)
-		for (int j = 0; j < p.length(); j++) {
-			if( p.charAt(j) == '*' )
-				match[i + 1][j + 1] = (match[i][j + 1] | match[i + 1][j] | match[i][j]);
-			else if( s.charAt(i) == p.charAt(j) || p.charAt(j) == '?' )
-				match[i + 1][j + 1] = match[i][j];
-		}
-	return match[s.length()][p.length()];
+/*CODE-2
+class Solution
+{
+    int wildCard(String pattern, String str)
+    {
+        // Your code goes here
+        int m = str.length(), n = pattern.length();
+        boolean[][] dp = new boolean[n + 1][m + 1];
+        dp[0][0] = true;
+        for (int i = 1; i <= n; i++) {
+            boolean flag = true;
+            for (int k = 1; k <= i; k++) {
+                if (pattern.charAt(k - 1) != '*') {
+                    flag = false;
+                    break;
+                }
+            }
+            dp[i][0] = flag;
+        }
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= m; j++) {
+                if (pattern.charAt(i - 1) == str.charAt(j - 1) || pattern.charAt(i - 1) == '?')
+                    dp[i][j] = dp[i - 1][j - 1];
+                else if (pattern.charAt(i - 1) == '*')
+                    dp[i][j] = dp[i - 1][j] || dp[i][j - 1];
+                else
+                    dp[i][j] = false;
+            }
+        }
+        return dp[n][m] ? 1 : 0;
+    
+    }
 }
  */
