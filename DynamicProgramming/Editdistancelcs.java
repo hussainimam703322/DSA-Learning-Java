@@ -10,14 +10,14 @@ public class Editdistancelcs {
         int n =s1.length();
         int m= s2.length();
         int dp[][] = new int[n+1][m+1];
-
+        //intialize the 2D table             
         for(int i=0;i<n+1;i++){
             for(int j=0;j<m+1;j++){
                 if(i==0){
-                    dp[i][j] = j;
+                    dp[i][j] = j;//str1 size = str2.length
                 }
                 if(j==0){
-                    dp[i][j]=i;
+                    dp[i][j]=i; //str2 size = str1.length
                 }
             }
         }
@@ -28,9 +28,10 @@ public class Editdistancelcs {
                     dp[i][j] = dp[i-1][j-1];
                 }
                 else{
-                    int add = dp[i][j-1]+1;
-                    int del = dp[i-1][j] + 1;
-                    int Replace = dp[i-1][j-1]+1;
+                    //we add 1 because atleast 1 operation will perform 
+                    int add = dp[i][j-1]+1; //add in first string then both string last(character) will same then remove them so str2 size will be m-1
+                    int del = dp[i-1][j] + 1; //delete from first string so i-1
+                    int Replace = dp[i-1][j-1]+1; //replace with another character then remove them
                     dp[i][j] = Math.min(add,Math.min(del, Replace));
                 }
             }
