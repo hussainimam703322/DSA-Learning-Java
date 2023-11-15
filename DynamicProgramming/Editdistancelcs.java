@@ -1,4 +1,3 @@
-package DPStrings;
 /*
 Given two strings s and t. Return the minimum number of operations required to convert s to t.
 The possible operations are permitted:
