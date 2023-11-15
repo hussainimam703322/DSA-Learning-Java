@@ -1,14 +1,7 @@
-/*
-Pattern Identification:
-Whenever we need to find the answer to a large problem such that the problem can be
-broken into subproblems and the final answer varies due to the order in which the 
-subproblems are solved, we can think in terms of partition DP. 
- */
 package partitionDP;
-//matrix chain multiplication TABULATION METHOD
 import java.util.*;
 
-class MCM{
+class MCSMemoization{
     // Function to recursively calculate the minimum number of operations for matrix multiplication
     static int f(int[] arr, int i, int j, int[][] dp) {
         // Base condition
