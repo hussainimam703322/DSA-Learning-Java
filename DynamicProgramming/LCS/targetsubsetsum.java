@@ -1,3 +1,4 @@
+package LCS;
 public class targetsubsetsum {
     public static boolean subsetsum(int arr[],int sum){
         int n=arr.length;

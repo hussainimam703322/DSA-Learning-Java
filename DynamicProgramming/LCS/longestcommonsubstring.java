@@ -1,3 +1,4 @@
+package LCS;
 public class longestcommonsubstring {
     public static int longeststring(String str1,String str2,int n,int m){
         int dp[][] = new int[n+1][m+1];

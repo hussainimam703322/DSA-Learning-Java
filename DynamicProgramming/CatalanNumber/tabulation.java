@@ -3,7 +3,7 @@ package CatalanNumber;
 public class tabulation {
     public static int findCatalan(int n) {
         // code here
-        long mod = 1000000007;
+        long mod = 1000000007; //1e9
         long[] dp = new long[n + 1];
         dp[0] = dp[1] = 1;
 
