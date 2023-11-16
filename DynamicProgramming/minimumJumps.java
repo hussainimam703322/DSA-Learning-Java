@@ -38,13 +38,23 @@ the end.
 
 SHORT SOLUTION
 static int canReach(int[] A, int N) {
-        // code here
+        // Initialize the last position as unreachable
         int lastReachable = N - 1;
+
+        // Initialize steps required to reach the last position
+        int steps = 0;
+
+        // Iterate backward from the second-to-last position to the first position
         for (int i = N - 2; i >= 0; i--) {
+            // Check if the current position is reachable from the last reachable position
             if (i + A[i] >= lastReachable) {
+                // If reachable, update the last reachable position and increment steps
                 lastReachable = i;
+                steps++;
             }
         }
-        return (lastReachable == 0) ? 1 : 0;
+
+        // If the first position is reachable, return the minimum steps; otherwise, return -1
+        return (lastReachable == 0) ? steps : -1;
     }
  */
