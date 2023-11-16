@@ -47,7 +47,7 @@ created two bags one have bag1 capacity sum/2 = w another  bag2 sum2 = sum - sum
 
 if set1 contains {1,11} then set2 must contains{6,5}
 
-if arr contains element less than or = the capacity of bag so that choice in valid 
+if arr contains element less than or = the capacity of bag so that choice is valid 
 if arr contains element more than the capacity of bag so that choice in invalid 
 so element will come in bag based on choices
 
