@@ -20,7 +20,7 @@ class MCMtabulation{
         // Fill in the dp array using bottom-up approach
         for (int i = N - 1; i >= 1; i--) { //starting point of array 
             for (int j = i + 1; j < N; j++) { //end point of array
-                int minOperations = Integer.MAX_VALUE;
+                dp[i][j] = Integer.MAX_VALUE;
 
                 // Partitioning loop to find the optimal split point
                 //like below partition will done
@@ -30,9 +30,8 @@ class MCMtabulation{
                 
                 for (int k = i; k <= j - 1; k++) { 
                     int operations = dp[i][k] + dp[k + 1][j] + arr[i - 1] * arr[k] * arr[j];
-                    minOperations = Math.min(minOperations, operations);
+                    dp[i][j] = Math.min(dp[i][j], operations);
                 }
-                dp[i][j] = minOperations;
             }
         }
        
