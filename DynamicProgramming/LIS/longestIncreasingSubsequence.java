@@ -91,3 +91,29 @@ maximum value encountered so far in the previous  row of the dp array.
 The result is updated with the maximum value in the dp array.
 The final result is the maximum length of LCIS encountered during the entire process.    
  */
+/*
+public static int longestSubsequence(int size, int a[]) {
+        if (size == 0) {
+            return 0;
+        }
+
+        int[] tailTable = new int[size];
+        int len = 1;
+        tailTable[0] = a[0];
+
+        for (int i = 1; i < size; i++) {
+            if (a[i] < tailTable[0]) {
+                tailTable[0] = a[i];
+            } else if (a[i] > tailTable[len - 1]) {
+                tailTable[len++] = a[i];
+            } else {
+                int index = Arrays.binarySearch(tailTable, 0, len, a[i]);
+                if (index < 0) {
+                    index = -index - 1;
+                }
+                tailTable[index] = a[i];
+            }
+        }
+        return len;
+    }
+ */
