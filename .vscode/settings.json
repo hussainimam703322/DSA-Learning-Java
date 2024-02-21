@@ -5,10 +5,11 @@
         "Sorting",
         "GreedyAlgorithm",
         "Graph",
+        "DynamicProgramming",
         "Backtracking",
         "Array 2D(Matrix)",
         "ACODEPRACTICE",
-        "DynamicProgramming"
+        "Bitmanipulation"
     ],
     "java.debug.settings.onBuildFailureProceed": true
 }

@@ -1,4 +1,4 @@
-package CoreJava.Bitmanipulation;
+
 
 public class Setbitmask {
     public static void main(String[] args) {

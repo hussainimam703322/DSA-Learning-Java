@@ -1,4 +1,4 @@
-package CoreJava.Bitmanipulation;
+
 
 import java.util.Scanner;
 
