@@ -1,5 +1,8 @@
+package staticallconcepts;
 
-class Mobile{
+//all about STATIC VARIABLES
+
+class staticvariable{
     static String name;
     static String brand;
     int price;
@@ -11,17 +14,17 @@ class Mobile{
 }
 class Demo{
      public static void main(String[] args) {
-        Mobile obj1 = new Mobile();
+        staticvariable obj1 = new staticvariable();
         obj1.name= "S21";
         obj1.brand= "SAMSUNG";
         obj1.price = 350000;
 
-        Mobile obj2 = new Mobile();
+        staticvariable obj2 = new staticvariable();
         obj2.name= "15Pro";
         obj2.brand= "APPLE";
         obj2.price = 550000;
 
-        Mobile obj3 = new Mobile();
+        staticvariable obj3 = new staticvariable();
         obj3.name= "11Pro";
         obj3.brand= "Nokia";
         obj3.price = 650000;

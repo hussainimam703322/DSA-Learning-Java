@@ -5,9 +5,9 @@ public class reverse {
         int ans = 0;
 
         while(num > 0){
-            int rem = num % 10;
-            num /= 10;
-            ans = ans * 10 +  rem;
+            int rem = num % 10; //7 remainder 
+            num /= 10; // 2359 quotient
+            ans = ans * 10 +  rem; // 0 * 10 + rem = 7
         }
         System.out.println(ans);
     }

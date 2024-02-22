@@ -1,4 +1,13 @@
+package staticallconcepts;
+/*
+1.A static nested class can access the static members of its outer class,
+even if they are private, which can be useful for encapsulation.
+2.It helps in logically grouping classes that are only used in one place,
+making your code more organized and easier to understand.
+*/
+
 public class statickeyword {
+
     static class solution{
         String brand;
         String name;
