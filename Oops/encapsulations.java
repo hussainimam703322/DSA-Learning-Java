@@ -1,4 +1,4 @@
-package CoreJava.Oops;
+
 
 //it binds data with functions , in this we cannot access data directly , used for data abstraction
 public class encapsulations {
