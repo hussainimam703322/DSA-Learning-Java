@@ -2,7 +2,7 @@ package MultThreadingconcepts;
 
 public class LamdaExpressions {
     public static void main(String[] args) {
-        // Runnable obj1 = new Runnable() {       <-- we can also use this
+        // ➤ Runnable obj1 = new Runnable() {       <-- we can also use this
             
         // };
         Runnable obj1 = () -> {
