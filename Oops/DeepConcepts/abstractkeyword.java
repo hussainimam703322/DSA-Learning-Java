@@ -2,6 +2,7 @@ package DeepConcepts;
 //we can only use abstract method inside abstract class
 //but we can use abstract or non abstract method inside abstract class
 //we cannot create object of abstract class
+
 abstract class Car{
     public abstract void drive();
     public abstract void fly();
