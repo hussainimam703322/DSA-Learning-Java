@@ -1,4 +1,4 @@
-package CoreJava.Hashmap;
+
 import java.util.*;
 public class Types_of_set {
     public static void main(String[] args) {

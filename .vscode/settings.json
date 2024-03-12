@@ -3,6 +3,7 @@
         "Trie",
         "String",
         "Sorting",
+        "Oops",
         "GreedyAlgorithm",
         "Graph",
         "DynamicProgramming",
@@ -10,7 +11,7 @@
         "Backtracking",
         "Array 2D(Matrix)",
         "ACODEPRACTICE",
-        "Oops"
+        "Hashmap"
     ],
     "java.debug.settings.onBuildFailureProceed": true
 }

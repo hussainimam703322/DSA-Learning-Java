@@ -1,9 +1,9 @@
-package CoreJava.Hashmap;
+
 import java.util.*;
 public class Types_of_Hahmap {
     public static void main(String[] args) {
         HashMap<String,Integer> hm = new HashMap<>();
-        hm.put("India",100);
+        hm.put("India",200);
         hm.put("china",150);
         hm.put("US",50);
         System.out.println(hm);
@@ -16,7 +16,11 @@ public class Types_of_Hahmap {
         System.out.println(lhm);
 
 
-        //sorted in arranging order of alphabets
+        /*
+        String implements the Comparable interface, the elements will be 
+        ordered based on the natural ordering of the keys
+        (i.e., lexicographic order for strings).
+         */
         TreeMap<String,Integer> tree = new TreeMap<>();
         tree.put("India",10);
         tree.put("china",150);

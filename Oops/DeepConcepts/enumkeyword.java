@@ -8,6 +8,7 @@ public class enumkeyword {
     public static void main(String[] args) {
         Status a = Status.Running;
         System.out.println(a);
+        System.out.println(a.getClass().getSuperclass());
 
         Status[] ss = Status.values();
         for (Status s : ss) {

@@ -1,4 +1,4 @@
-package CoreJava.Hashmap;
+
 import java.util.*;
 
 //In this we will learn a basic knowledge of hashmap in detail with implementation
@@ -38,7 +38,7 @@ public class BasicOperation {
         System.out.println(map.isEmpty()); // it will check whether the map is empty or not
         
         //Iteration through keyset in hashmap
-
+        
         Set<String> keys = map.keySet();
         System.out.println(keys);
 

@@ -1,4 +1,3 @@
-package CoreJava.Hashmap;
 
 import java.util.HashSet;
 import java.util.Iterator;
