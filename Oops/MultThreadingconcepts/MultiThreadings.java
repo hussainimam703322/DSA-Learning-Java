@@ -44,6 +44,6 @@ public class MultiThreadings {
     }
 }
 /*
-MethodOverride.A t = methodOverride.new A();
+Multithreading.A t = multithreading.new A();
 if we not make class A outer class we have to declare instance like above
  */
